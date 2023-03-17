@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* Positive anything is better than negative nothing */
-
-/* main - Main function */
-/* Return - Always 0 (success) */
+/**
+ * main - this is the entry function
+ * Description: There isn't a lot to talk about
+ *here, I'll leave it short
+ * Return: 0 (success)
+ */
 int main(void)
 {
 	int n;
