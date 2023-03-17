@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main
+ * main - start point
  * Description: main is the entry point function
  *To understand main, you read to read books
  *on C.
