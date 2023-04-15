@@ -17,12 +17,15 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	_2dim = (int **)malloc(sizeof(int) * height);
+	_2dim = malloc(sizeof(int *) * height);
 
 	if (_2dim == NULL)
 		return (NULL);
 
-	/* remember it's an array and we init i = 0, we need condition to be less than array value*/
+	/**
+	 * remember it's an array and we init i = 0,
+	 * we need condition to be less than array value
+	 */
 	for (i = 0; i < height; i++)
 	{
 		_2dim[i] = malloc(sizeof(int) * width);
