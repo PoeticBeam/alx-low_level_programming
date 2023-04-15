@@ -15,23 +15,24 @@ int **alloc_grid(int width, int height)
 	int **_2dim;
 	int i, j;
 
-	if (width == 0 || height == 0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 	_2dim = (int **)malloc(sizeof(int) * height);
 
-	if (_2dim == NULL || _2dim == 0)
+	if (_2dim == NULL)
 		return (NULL);
 
-	for (i = 0; i <= height; i++)
+	/* remember it's an array and we init i = 0, we need condition to be less than array value*/
+	for (i = 0; i < height; i++)
 	{
-		_2dim[i] = (int *)malloc(sizeof(int) * width);
+		_2dim[i] = malloc(sizeof(int) * width);
 
 		if (_2dim[i] == NULL)
 		{
-		for (i = 0; i >= 0; i--)
-			free(_2dim[i]);
-		free(_2dim);
-		return (NULL);
+			for (; i >= 0; i--)
+				free(_2dim[i]);
+			free(_2dim);
+			return (NULL);
 		}
 	}
 
