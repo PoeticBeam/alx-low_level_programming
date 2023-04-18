@@ -12,6 +12,8 @@
 
 void print_dog(struct dog *d)
 {
+	struct d;
+
 	if (d == NULL)
 		return;
 
