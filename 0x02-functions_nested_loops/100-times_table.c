@@ -4,6 +4,7 @@
 /**
  * print_times_table - prints n times table, starting with 0
  * up to 15 times table.
+ * @n: LIMIT
  * Return: nothing
  */
 
