@@ -5,7 +5,7 @@
  * print_last_digit - prints the last digit of a number
  * @i: integer passed to function
  *
- * Return: c
+ * Return: last digit of a number 
  */
 
 int print_last_digit(int i)
