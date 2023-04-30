@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Fizz-Buzz - function fizz multiples of 3
+ * main - function fizz multiples of 3
  * buzz multiples of 5
  *
  * Return: 0 on success
@@ -9,15 +9,15 @@
 
 int main(void)
 {
-	int i = 0;
+	int i;
 
-	for (i = 0; i <= 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		if ((i != 0) && (i % 5 == 0 && i % 3 == 0))
+		if (i % 5 == 0 && i % 3 == 0)
 			printf("FizzBuzz ");
-		else if ((i != 0) && (i % 3 == 0))
+		else if (i % 3 == 0)
 			printf("Fizz ");
-		else if ((i != 0) && (i % 5 == 0))
+		else if (i % 5 == 0)
 			printf("Buzz ");
 		else
 			printf("%d ", i);
