@@ -4,21 +4,40 @@
 /**
  * print_binary - check the code
  *
- * @n: takes integer number to convert to binary
- * Return: 0 on fail, binary on success
+ * @n: the integer number
+ * Returns: the binary representation of the number
  */
 
 void print_binary(unsigned long int n)
 {
-	unsigned int p;
+	int k;
+	int leading_zeroes = 1;
 
-	if(!n)
-		return (NULL);
-	
-	int p = sizeof(unsigned long int) * 8 - 1;
-	int lead_zero = 1;
+	if (!n)
+		return;
 
-	while (p >= 0)
+	if (n == 0)
 	{
+		_putchar('0');
+		return;
+	}
 
-	p = )
+	k = sizeof(unsigned long int) * 8 - 1;
+
+	while (k >= 0)
+	{
+		unsigned long int mask = 1UL << k;
+
+		if ((n & mask) != 0)
+		{
+			leading_zeroes = 0;
+			_putchar('1');
+		}
+		else if (!leading_zeroes)
+		{
+			_putchar('0');
+		}
+
+		k--;
+	}
+}
