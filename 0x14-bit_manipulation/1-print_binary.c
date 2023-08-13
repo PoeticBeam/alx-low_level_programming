@@ -13,14 +13,14 @@ void print_binary(unsigned long int n)
 	int k;
 	int leading_zeroes = 1;
 
-	if (!n)
-		return;
-
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
+
+	if (!n)
+		return;
 
 	k = sizeof(unsigned long int) * 8 - 1;
 
